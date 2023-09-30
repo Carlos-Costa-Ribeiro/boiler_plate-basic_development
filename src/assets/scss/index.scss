@@ -1,0 +1,15 @@
+// Indexing custom bootstrap variables
+@import './bootstrap.scss';
+
+// Basic reset and normalize
+* {
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+// Custom styles
