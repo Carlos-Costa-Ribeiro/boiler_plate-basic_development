@@ -9,13 +9,11 @@ const isProduction = process.env.NODE_ENV == 'production';
 const stylesHandler = MiniCssExtractPlugin.loader;
 
 const config = {
-    entry: './src/index.ts',
+    entry: './src/assets/ts/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
-        open: true,
-        host: 'localhost',
         hot: false,
     },
     plugins: [
@@ -30,6 +28,10 @@ const config = {
     ],
     module: {
         rules: [
+            {
+                test: /\.(html)$/,
+                use: ['html-loader'],
+            },
             {
                 test: /\.(ts|tsx)$/i,
                 exclude: /node_modules/,
